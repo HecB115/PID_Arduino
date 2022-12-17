@@ -27,15 +27,13 @@ double PID::time(double timesamples){
   return TimeSamples;
 }
 
-double PID::limits(double minValue, double maxValue){
+void PID::limits(double minValue, double maxValue){
   minVal = minValue;
   maxVal = maxValue;
-
-  return minVal, maxVal;
 }
 
 // If you want to change the current Kp, Ki and Kd values, use this function
-double PID::kValues(double KP, double KI, double KD){
+void PID::kValues(double KP, double KI, double KD){
   kp = KP;
   ki = KI;
   kd = KD;  
