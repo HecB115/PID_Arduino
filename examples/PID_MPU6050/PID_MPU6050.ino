@@ -95,7 +95,7 @@ void readAcc(){
   ay = Ay_RAW / 16384.0;
   az = Az_RAW / 16384.0; 
   
-  //Using Euler angles we calculate pitch and roll
+  //Calculate the accelerometer part of complementary filter
   roll = rad2degs((atan2(ay, sqrt(pow(ax, 2) + pow(az, 2)))));
   pitch = rad2degs((atan2(-ax , sqrt(pow(ay, 2) + pow(az, 2)))));
 }
